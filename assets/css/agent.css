@@ -1,0 +1,43 @@
+body{
+    background-image: url("/img/img_home/bg.png");
+}
+.agent_container {
+    padding-top: 5%;
+  }
+
+.section  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    flex: 1;
+}
+
+.section-left {
+    width: 30%;
+
+}
+
+.section-right {
+    width: 30%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+em {
+    align-self: flex-end;
+    font-size: 0.9rem;
+}
+
+h3 {
+    color: #ff4458;
+}
+
+.agent_title {
+    margin-left: 1rem;
+}

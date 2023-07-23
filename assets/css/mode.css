@@ -1,0 +1,79 @@
+body {
+    background-image: url("/img/img_home/bgtwo");
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 7%;
+    gap: 1rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-left {
+    width: 40%;
+    display: flex;
+}
+
+.section-right {
+    width: 40%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(98,26,50, 1);
+    color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.section-img {
+    height: 700px;
+}
+
+.chance {
+    text-align: end;
+    font-size: 12px;
+}
+
+.title {
+    margin: 2rem;
+    text-align: center;
+    color: white;
+}
+
+em {
+    color: white;
+    font-size: 15px;
+}
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(98,26,50, 1);
+    border: 1px solid white;
+    color: white;
+    cursor: crosshair;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    font-weight: bold;
+    box-shadow: 2px 2px 2px;
+    background-color: rgb(253,66,85);
+}
+
+span {
+    text-decoration: underline;
+}
+
+.classic {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}

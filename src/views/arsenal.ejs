@@ -1,0 +1,140 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/arsenal.css">
+</head>
+<%- include ('partials/nav') %>
+<body>
+    <div class="weapon_container">   
+        <h2 class="type">Les armes de poings</h2>   
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "Arme de poing") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="weapon_container">         
+        <h2 class="type">Les Pistolets-Mitrailleurs</h2>
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "PM") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="weapon_container">        
+        <h2 class="type">Les fusils à pompe</h2>
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "Fusils à pompe") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="weapon_container"> 
+        <h2 class="type">Les fusils</h2>
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "Fusils") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="weapon_container">         
+        <h2 class="type">Les snipers</h2>
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "Snipers") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="weapon_container">    
+        <h2 class="type">Les Mitrailleuses</h2>
+        <% weapons.forEach(weapon=> { %>             
+            <% if (weapon.type.name === "Mitrailleuses") { %>
+            <div class="weapon_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img class="weapon_img" src="/img/img_weapon/<%= weapon.name %>.png" alt="<%= weapon.name %>">
+                <p><%= weapon.name %></p>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                        <h2 class="weapon_title"><%= weapon.name %></h2>
+                        <h3><%= weapon.type.name %></h3>      
+                        <% if (weapon.price === 0) { %>
+                         <h3>Gratuit, disponible à toutes les manches</h3>
+                        <% } else { %>
+                        <p class="weapon_info"><%= weapon.price %> $</p>
+                        <% } %>
+                </div>
+            </div>   
+            <% } %>
+        <% }) %>    
+    </div>
+    <script src="/js/arsenal.js"></script>
+</body>
+</html>

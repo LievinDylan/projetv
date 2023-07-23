@@ -1,0 +1,58 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: 0%;
+    left: 0%;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(98,26,50);
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+header>h1 {
+    padding: 0 3rem;
+    color: white;
+}
+
+ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0 3rem;
+    list-style: none;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: crosshair;
+    transition: font-size 0.5s;
+    padding: 2rem;
+}
+
+.nav:hover {
+    font-size: 20px;
+}
+
+.home {
+    transition: font-size 0.5s;
+    cursor: crosshair;
+}
+
+.home:hover {
+    font-size: 40px;
+}

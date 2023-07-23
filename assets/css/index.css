@@ -1,0 +1,27 @@
+.index {
+    height: 100vh;
+    background-image: url("../img/img_home/homepage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button-index {
+    height: 100px; 
+    width: 300px; 
+   cursor: crosshair;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'Orbitron', sans-serif;
+   font-size: 1.5rem;
+   background-color: rgb(98,26,50, 0.9);
+   border: 2px solid black;
+   border-radius: 10px;
+}
+
+.button-index:hover {
+   background-color: rgb(253,66,85);
+   box-shadow: 2px 2px 2px;
+   font-weight: bold;
+}

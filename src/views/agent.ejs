@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/agent.css">
+</head>
+<%- include('partials/nav') %>
+<body>
+    <div class="agent_container">
+        <% if (agent.name === "Kayo") { %>
+            <h1 class="agent_title">Présentation de KAY/O</h1>
+        <% } else { %>
+            <h1 class="agent_title">Présentation de <%= agent.name %></h1>
+        <% } %>
+    <div class="section">
+    <div class="section-left">
+        <img src="/img/img_agent/<%= agent.name %>.png">
+    </div>
+    <div class="section-right">
+    <h3>Rôle : </h3>
+    <p><%= agent.role.name %></p>
+    <h3>Compétences :</h3>
+    <% agent.skills.forEach(skill => { %>
+     <p><%= skill.name %></p>
+    <% }) %>
+    <h3>Description :</h3>
+    <p><%= agent.description %></p>
+    <em>"<%= agent.quote %>"</em>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

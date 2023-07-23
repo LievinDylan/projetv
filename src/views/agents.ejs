@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/agents.css">
+</head>
+<%- include ('partials/nav') %>
+<body>
+    <div class="agent_container">
+        <% agents.forEach(agent=> { %>
+            <div class="agent_card" onclick="toggleCard(this)">
+                <!-- Face avant de la carte -->
+                <img src="/img/icon_agent/<%= agent.name %>.png" alt="<%= agent.name %>">
+                <% if (agent.name === "Kayo") { %>
+                 <h2 class="agent_name">KAY/O</h2>
+                <% } else { %>
+                <h2 class="agent_name"><%= agent.name %></h2>
+                <% } %>
+                <!-- Face arrière de la carte (description) -->
+                <div class="description">
+                    <% if (agent.name === "Kayo") { %>
+                        <h2 class="agent_title">KAY/O</h2>
+                    <% } else { %>
+                        <h2 class="agent_title"><%= agent.name %></h2>
+                    <% } %>
+                        <img class="icon_role" src="/img/icon_role/<%= agent.role.name %>.png">
+                        <p class="agent_info"><%= agent.description %></p>
+                        <a href="/agents/<%= agent.id %>" class="know-more">En savoir plus</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <script src="/js/agents.js"></script>
+</body>
+</html>

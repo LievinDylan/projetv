@@ -1,0 +1,102 @@
+body {
+    background-image: url("/img/img_home/bgtwo");
+    background-size: cover;
+}
+
+.agent_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10%;
+    gap: 5rem;
+  }
+  
+  .agent_card {
+    position: relative; 
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    padding: 1rem;
+    background-color: rgb(98,26,50);
+    color: white;
+    border-radius: 16px;
+    cursor: pointer; 
+    transition: transform 0.1s;
+  }
+
+  .agent_card:hover {
+    box-shadow: 2px 2px 2px rgb(253,66,85);
+  }
+  
+  .agent_card img {
+    width: 100%;
+    border-radius: 16px;
+  }
+  
+
+  .agent_card .description {
+    font-size: 10px;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 16px;
+    transform: rotateY(180deg); 
+    backface-visibility: hidden; 
+    transition: transform 0.1s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .agent_title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .agent_name {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .icon_role {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+  }
+
+  .agent_card.show-back .description {
+    transform: rotateY(0); 
+    transform: scaleX(-1);
+    background-color: rgb(98,26,50);
+    color: white;
+    height: fit-content;
+  }
+  
+  .agent_card.show-back {
+    transform: rotateY(180deg); 
+  }
+
+  .agent_info {
+    font-size: 14px;
+  }
+
+  .know-more {
+    font-size: 13px;
+    text-align: end;
+    font-size: bold;
+    transition: font-size 0.5s;
+    color: white;
+  }
+
+  .know-more:hover {
+    cursor: crosshair;
+    font-size: 16px;
+  }
+
