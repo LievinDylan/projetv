@@ -123,13 +123,14 @@ span {
 
 
 .player {
-    background-color: rgba(15, 25, 35, 0.8);
+    background-color: rgba(15, 25, 35, 1);
     color: white;
     display: flex;
     gap: 3rem ;
     padding: 1rem;
     height: 70px;
     width: 500px;
+    border-radius: 10px;
 }
 
 .skill {

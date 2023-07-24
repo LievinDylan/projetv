@@ -11,7 +11,7 @@
         <% if (firstTeam[currentPlayer - 1] === "") { %>
           <h3>Joueur <%= currentPlayer %> :</h3>
         <% } else { %>
-          <h3><%= firstTeam[currentPlayer - 1] %></h3>
+          <h3><%= firstTeam[currentPlayer - 1] %> :</h3>
         <% } %>
         <% const playerIndex = 'playerIndex' + currentPlayer; %>
         <% if (req.session[playerIndex] >= 0 && req.session[playerIndex] < agents.length) { %>
