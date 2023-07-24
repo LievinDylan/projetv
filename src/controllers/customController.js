@@ -6,36 +6,33 @@ const customController = {
         res.render("custom");
     },
     async renderCustomOneTeamPage(req, res) {
-        const i = Math.floor(Math.random() * 22);
-        let j = Math.floor(Math.random() * 22);
-        while (i === j) {
-            j = Math.floor(Math.random() * 22);
-          }
-        let k = Math.floor(Math.random() * 22);
-        while (k === i || k === j) {
-            k = Math.floor(Math.random() * 22);
-          }
-        let l = Math.floor(Math.random() * 22);
-        while (l === k || l === i || l === j) {
-            l = Math.floor(Math.random() * 22);
-          }
-        let m = Math.floor(Math.random() * 22);
-        while (m === i || m === j || m === k || m === l) {
-            m = Math.floor(Math.random() * 22);
-          }
-          const pOne = req.session.playerone;
-          const pTwo = req.session.playertwo;
-          const pThree = req.session.playerthree;
-          const pFour = req.session.playerfour;
-          const pFive = req.session.playerfive;
-        const agents = await Agent.findAll({
-            include: ["role", "skills", {
-                model: Weapon,
-                as: "weapons",
-                include: "type"
-            }]
-        });
-        res.render("oneteam", { agents, i , j , k , l , m, pOne, pTwo, pThree, pFour, pFive })
+      const numberOfAgents = 22;
+      const numberOfPlayers = req.session.players || 1;
+      // Team 1
+      const selectedAgents = [];
+      // Team 2
+      const selectedAgentsBis = [];
+
+
+      // Sélection aléatoire d'agents uniques pour chaque joueur de la Team 1
+      for (let currentPlayer = 1; currentPlayer <= numberOfPlayers; currentPlayer++) {
+        let randomIndex = Math.floor(Math.random() * numberOfAgents);
+        while (selectedAgents.includes(randomIndex)) {
+          randomIndex = Math.floor(Math.random() * numberOfAgents);
+        }
+        selectedAgents.push(randomIndex);
+        req.session['playerIndex' + currentPlayer] = randomIndex;
+      }
+      
+      //Création d'un tableau pour stocker les noms des joueurs !
+      const firstTeam = [];
+      firstTeam.push(req.session.playerone, req.session.playertwo, req.session.playerthree, req.session.playerfour, req.session.playerfive)
+      console.log(firstTeam)
+
+      const agents = await Agent.findAll();
+        res.render("oneteam", { agents, firstTeam,    
+          numberOfPlayers,
+          req })
     },
     renderCustomOneTeam(req, res) {
         req.session.playerone = req.body.playerone;
@@ -43,6 +40,7 @@ const customController = {
         req.session.playerthree = req.body.playerthree;
         req.session.playerfour = req.body.playerfour;
         req.session.playerfive = req.body.playerfive;
+        req.session.players = req.body.players
         res.redirect("/generator/oneteam");
     },
 

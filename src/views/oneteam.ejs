@@ -3,91 +3,27 @@
     </head>
     <%-include('partials/nav') %>
 
-        <body>
-            <h1 class="perso-title">Voici votre équipe :</h1>
-            <div class="perso">
-                <div class="player">
-                    <% if (!pOne) { %>
-                     <h3>Joueur 1 :</h3>
-                    <% } else { %>
-                        <h3><%= pOne %></h3>
-                        <% } %>
-                    <% for( let index=0; index < agents.length; index++ ) { %>
-                        <% if (index===i) { %>
-                            <img class="icon" src="/img/icon_agent/<%= agents[i].name %>.png"
-                                alt="icone de <%= agents[i].name %>">
-                            <h3>
-                                <%= agents[i].name %>
-                            </h3>
-                </div>
-                <% }} %>
+ <body>
+  <h1 class="perso-title">Voici votre équipe :</h1>
+  <div class="perso">
+    <% for (let currentPlayer = 1; currentPlayer <= numberOfPlayers; currentPlayer++) { %>
+      <div class="player">
+        <% if (firstTeam[currentPlayer - 1] === "") { %>
+          <h3>Joueur <%= currentPlayer %> :</h3>
+        <% } else { %>
+          <h3><%= firstTeam[currentPlayer - 1] %></h3>
+        <% } %>
+        <% const playerIndex = 'playerIndex' + currentPlayer; %>
+        <% if (req.session[playerIndex] >= 0 && req.session[playerIndex] < agents.length) { %>
+          <% const agentIndex = req.session[playerIndex]; %>
+          <img class="icon" src="/img/icon_agent/<%= agents[agentIndex].name %>.png"
+            alt="icone de <%= agents[agentIndex].name %>">
+          <h3><%= agents[agentIndex].name %></h3>
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+</body>
 
-                <div class="player">
-                    <% if (!pTwo) { %>
-                        <h3>Joueur 2 :</h3>
-                       <% } else { %>
-                           <h3><%= pTwo %></h3>
-                           <% } %>
-                    <% for( let index=0; index < agents.length; index++ ) { %>
-                        <% if (index===j) { %>
-                            <img class="icon" src="/img/icon_agent/<%= agents[j].name %>.png"
-                                alt="icone de <%= agents[j].name %>">
-                            <h3>
-                                <%= agents[j].name %>
-                            </h3>
-                </div>
-                <% }} %>
-
-                <div class="player">
-                    <% if (!pThree) { %>
-                        <h3>Joueur 3 :</h3>
-                       <% } else { %>
-                           <h3><%= pThree %></h3>
-                           <% } %>
-                    <% for( let index=0; index < agents.length; index++ ) { %>
-                        <% if (index===k) { %>
-                            <img class="icon" src="/img/icon_agent/<%= agents[k].name %>.png"
-                                alt="icone de <%= agents[k].name %>">
-                            <h3>
-                                <%= agents[k].name %>
-                            </h3>
-                </div>
-                <% }} %>
-
-                <div class="player">
-                    <% if (!pFour) { %>
-                        <h3>Joueur 4 :</h3>
-                       <% } else { %>
-                           <h3><%= pFour %></h3>
-                           <% } %>
-                    <% for( let index=0; index < agents.length; index++ ) { %>
-                        <% if (index===l) { %>
-                            <img class="icon" src="/img/icon_agent/<%= agents[l].name %>.png"
-                                alt="icone de <%= agents[l].name %>">
-                            <h3>
-                                <%= agents[l].name %>
-                            </h3>
-                </div>
-                <% }} %>
-
-                <div class="player">
-                    <% if (!pFive) { %>
-                        <h3>Joueur 5 :</h3>
-                       <% } else { %>
-                           <h3><%= pFive %></h3>
-                           <% } %>
-                    <% for( let index=0; index < agents.length; index++ ) { %>
-                        <% if (index===i) { %>
-                            <img class="icon" src="/img/icon_agent/<%= agents[m].name %>.png"
-                                alt="icone de <%= agents[m].name %>">
-                            <h3>
-                                <%= agents[m].name %>
-                            </h3>
-                </div>
-                <% }} %>
-
-            </div>
-            <script src="/js/modes.js"></script>
-        </body>
 
         </html>
