@@ -1,0 +1,73 @@
+<%- include('partials/header') %>
+    <link rel="stylesheet" href="/css/mode.css">
+    </head>
+    <%-include('partials/nav') %>
+
+        <body>
+            <h1 class="perso-title">Voici votre équipe :</h1>
+            <div class="perso">
+                <div class="player">
+                    <h3><%= playerone %></h3>
+                    <% for( let index=0; index < agents.length; index++ ) { %>
+                        <% if (index===i) { %>
+                            <img class="icon" src="/img/icon_agent/<%= agents[i].name %>.png"
+                                alt="icone de <%= agents[i].name %>">
+                            <h3>
+                                <%= agents[i].name %>
+                            </h3>
+                </div>
+                <% }} %>
+
+                <div class="player">
+                    <h3>Joueur 2 :</h3>
+                    <% for( let index=0; index < agents.length; index++ ) { %>
+                        <% if (index===j) { %>
+                            <img class="icon" src="/img/icon_agent/<%= agents[j].name %>.png"
+                                alt="icone de <%= agents[j].name %>">
+                            <h3>
+                                <%= agents[j].name %>
+                            </h3>
+                </div>
+                <% }} %>
+
+                <div class="player">
+                    <h3>Joueur 3 :</h3>
+                    <% for( let index=0; index < agents.length; index++ ) { %>
+                        <% if (index===k) { %>
+                            <img class="icon" src="/img/icon_agent/<%= agents[k].name %>.png"
+                                alt="icone de <%= agents[k].name %>">
+                            <h3>
+                                <%= agents[k].name %>
+                            </h3>
+                </div>
+                <% }} %>
+
+                <div class="player">
+                    <h3>Joueur 4 :</h3>
+                    <% for( let index=0; index < agents.length; index++ ) { %>
+                        <% if (index===l) { %>
+                            <img class="icon" src="/img/icon_agent/<%= agents[l].name %>.png"
+                                alt="icone de <%= agents[l].name %>">
+                            <h3>
+                                <%= agents[l].name %>
+                            </h3>
+                </div>
+                <% }} %>
+
+                <div class="player">
+                    <h3>Joueur 5 :</h3>
+                    <% for( let index=0; index < agents.length; index++ ) { %>
+                        <% if (index===i) { %>
+                            <img class="icon" src="/img/icon_agent/<%= agents[m].name %>.png"
+                                alt="icone de <%= agents[m].name %>">
+                            <h3>
+                                <%= agents[m].name %>
+                            </h3>
+                </div>
+                <% }} %>
+
+            </div>
+            <script src="/js/modes.js"></script>
+        </body>
+
+        </html>

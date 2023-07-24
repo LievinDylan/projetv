@@ -5,44 +5,45 @@
 <body>
     <div class="container">
         <h1 class="title">Voici votre prochaine mission</h1>
+        <h4 class="difficulty">Niveau : Intermédiaire</h4>
         <div class="section">
             <div class="section-left">
                 <img class="section-img" src="/img/img_agent/<%= agent.name %>.png" alt="Une image de <%= agent.name %>">
-                <em>"<%= agent.quote %>"</em>  
+                <em class="quote">"<%= agent.quote %>"</em>  
             </div>
             <div class="section-right">
                 <% if (agent.name === "Kayo") { %>
-                    <h1>KAY/O</h2>
+                    <h1 class="animate-text">KAY/O</h2>
                 <% } else { %>
-                    <h1><%= agent.name %></h1>
+                    <h1 class="animate-text"><%= agent.name %></h1>
                 <% } %>
-                <p><%= agent.role.name %></p>
-                <h3>Arsenal :</h3>
+                <p class="animate-text"><%= agent.role.name %></p>
+                <h3 class="animate-text test">Arsenal :</h3>
                 <% const typeOne = agent.weapons.filter(weapon => weapon.type_id === 1)
                 const randomWeaponOne = typeOne[n] %>
-                <p><span>Arme de poing</span> : <%= randomWeaponOne.name %></p>
+                <p class="animate-text"><span>Arme de poing</span> :   <%= randomWeaponOne.name %></p>
                 <% const typeTwo = agent.weapons.filter(weapon => weapon.type_id === 2)
                 const randomWeaponTwo = typeTwo[j] %>
-                <p><span>PM</span> : <%= randomWeaponTwo.name %></p>
+                <p class="animate-text"><span class="animate-text">PM</span> :   <%= randomWeaponTwo.name %></p>
                 <% const typeThree = agent.weapons.filter(weapon => weapon.type_id === 3)
                 const randomWeaponThree = typeThree[k] %>
-                <p><span>Fusil à pompe</span> : <%= randomWeaponThree.name %></p>
+                <p class="animate-text"><span>Fusil à pompe</span> : <%= randomWeaponThree.name %></p>
                 <% const typeFour = agent.weapons.filter(weapon => weapon.type_id === 4)
                 const randomWeaponFour = typeFour[m] %>
-                <p><span>Fusil</span> : <%= randomWeaponFour.name %></p>
+                <p class="animate-text"><span>Fusil</span> : <%= randomWeaponFour.name %></p>
                 <% const typeFive = agent.weapons.filter(weapon => weapon.type_id === 5)
                 const randomWeaponFive = typeFive[l] %>
-                <p><span>Sniper</span> : <%= randomWeaponFive.name %></p>
+                <p class="animate-text"><span>Sniper</span> : <%= randomWeaponFive.name %></p>
                 <% const typeSix = agent.weapons.filter(weapon => weapon.type_id === 6)
                 const randomWeaponSix = typeSix[o] %>
-                <p><span>Mitrailleuse</span> : <%= randomWeaponSix.name %></p>
-                <h3>Compétences :</h3>
-                <p>Vous voilà en pleine forme et libre d'utiliser toutes vos compétences quand elles sont disponibles !</p>
-                <a href="/generator/medium" class="chance"><button>Nouvelle mission ?</button></a>
+                <p class="animate-text"><span>Mitrailleuse</span> : <%= randomWeaponSix.name %></p>
+                <h3 class="animate-text">Compétences :</h3>
+                <p class="animate-text">Vous voilà en pleine forme et libre d'utiliser toutes vos compétences quand elles sont disponibles !</p>
+                <a href="/generator/medium" class="chance"><button class="animate-text">Nouvelle mission ?</button></a>
             </div>
         </div>
 
     </div>
-
+    <script src="/js/modes.js"></script>
 </body>
 </html>

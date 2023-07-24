@@ -2,7 +2,7 @@ body{
     background-image: url("/img/img_home/bg.png");
 }
 .agent_container {
-    padding-top: 5%;
+    padding-top: 8%;
   }
 
 .section  {
@@ -22,8 +22,8 @@ body{
 
 .section-right {
     width: 30%;
-    padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1.4rem;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -39,5 +39,26 @@ h3 {
 }
 
 .agent_title {
-    margin-left: 1rem;
+    color: #ff4458;
+    text-align: center;
+}
+
+img {
+    height: 750px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-skill {
+    background-color: #ff4458;
+    height: 30px;
+    width: 30px;
+}
+
+.desc-skill {
+    font-size: 12px;
 }

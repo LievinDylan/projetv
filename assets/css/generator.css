@@ -19,7 +19,8 @@ header {
 .difficulty_container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    align-items: center;
+    width: 70%;
     margin: auto; 
     margin-top: 6%;
     gap: 1rem;
@@ -31,7 +32,7 @@ header {
     color: white;
     border-radius: 16px;
     padding: 1rem;
-    width: 40%;
+    width: 45%;
 }
 
 .valorant {
@@ -39,7 +40,7 @@ header {
     color: white;
     border-radius: 16px;
     padding: 1rem;
-    width: 40%;
+    width: 45%;
 }
 
 .card:hover {
@@ -52,10 +53,13 @@ button {
     padding: 1rem;
     cursor: crosshair;
     border: 2px solid black;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .valorant button {
-    background-color: rgb(253,66,85);
+    background-color: white;
+    color: rgba(15, 25, 35, 0.7);
+    font-family: 'Orbitron', sans-serif;
 }
 
 button:hover {
@@ -71,6 +75,7 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -82,3 +87,14 @@ h1 {
     margin: 0;
 }
 
+.link-perso {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    padding: 1rem;
+    background-color: rgb(15, 25, 35);
+}
+
+.link-perso:hover {
+    font-size: 18px;
+}
