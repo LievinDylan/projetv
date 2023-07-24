@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/agents.css">
 </head>
-<%- include ('partials/nav') %>
+<%- include('partials/nav') %>
 <body>
     <div class="agent_container">
         <% agents.forEach(agent=> { %>
@@ -13,7 +13,7 @@
                 <% } else { %>
                 <h2 class="agent_name"><%= agent.name %></h2>
                 <% } %>
-                <!-- Face arrière de la carte (description) -->
+                <!-- Face arrière de la carte -->
                 <div class="description">
                     <% if (agent.name === "Kayo") { %>
                         <h2 class="agent_title">KAY/O</h2>
@@ -29,4 +29,4 @@
     </div>
     <script src="/js/agents.js"></script>
 </body>
-</html>
+<%- include('partials/footer') %>

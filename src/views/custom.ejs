@@ -1,49 +1,57 @@
 <%- include('partials/header') %>
     <link rel="stylesheet" href="/css/custom.css">
     </head>
-    <%- include ('partials/nav') %>
+
 <body>
-    <div class="background">
-    <div class="container">
-    <h2>Bienvenue sur le générateur pour les parties personnalisées</h2>
-    <h3>Choisissez le nombre de joueurs :</h3>
-    <form method="POST" action="/generator/custom">
-    <select name="players" id="players">
-        <option value="0">--Nombre de joueurs--</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    <div class="players-container hidden">
-    <h4>Rentrez les pseudos de chaque joueur et lancez-vous pour une génération d'équipe aléatoire !</h4>
-    <div class="input playerOne hidden">
-    <label for="playerone">Entrez le pseudo du premier joueur</label>
-    <input type="text" name="playerone" id="playerone" placeholder="Joueur 1" maxlength="15">
-    </div>
-    <div class="input playerTwo hidden">
-    <label for="playertwo">Entrez le pseudo du second joueur</label>
-    <input type="text" name="playertwo" id="playertwo" placeholder="Joueur 2" maxlength="15">
-    </div>    
-    <div class="input playerThree hidden">
-    <label for="playerthree">Entrez le pseudo du troisième joueur</label>
-    <input type="text" name="playerthree" id="playerthree" placeholder="Joueur 3" maxlength="15">
-    </div>
-    <div class="input playerFour hidden">    
-    <label for="playerfour">Entrez le pseudo du quatrième joueur</label>
-    <input type="text" name="playerfour" id="playerfour" placeholder="Joueur 4" maxlength="15">
-    </div>
-    <div class="input playerFive hidden">   
-    <label for="playerfive">Entrez le pseudo du cinquième joueur</label>
-    <input type="text" name="playerfive" id="playerfive" placeholder="Joueur 5" maxlength="15">
-     </div>
-     <div class="input">   
-    <input class="submit" type="submit" value="Prêt !">
-     </div>   
-</form>
-</div>
-</div>
-</div>
-<script src="/js/custom.js"></script>
-</body>
+    <%- include ('partials/nav') %>
+            <main>
+                <div class="container">
+                    <h2>Bienvenue sur le générateur pour les parties personnalisées</h2>
+                    <h3>Ce générateur peut servir à générer plusieurs agents si vous ne jouez pas seul !</h3>
+                    <h3>Choisissez le nombre de joueurs :</h3>
+                    <form method="POST" action="/generator/custom">
+                        <select name="players" id="players">
+                            <option value="0">--Nombre de joueurs--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <div class="players-container hidden">
+                            <h4>Rentrez les pseudos de chaque joueur et lancez-vous pour une génération d'équipe
+                                aléatoire !</h4>
+                            <div class="input playerOne hidden">
+                                <label for="playerone">Entrez le pseudo du premier joueur</label>
+                                <input type="text" name="playerone" id="playerone" placeholder="Joueur 1"
+                                    maxlength="15">
+                            </div>
+                            <div class="input playerTwo hidden">
+                                <label for="playertwo">Entrez le pseudo du second joueur</label>
+                                <input type="text" name="playertwo" id="playertwo" placeholder="Joueur 2"
+                                    maxlength="15">
+                            </div>
+                            <div class="input playerThree hidden">
+                                <label for="playerthree">Entrez le pseudo du troisième joueur</label>
+                                <input type="text" name="playerthree" id="playerthree" placeholder="Joueur 3"
+                                    maxlength="15">
+                            </div>
+                            <div class="input playerFour hidden">
+                                <label for="playerfour">Entrez le pseudo du quatrième joueur</label>
+                                <input type="text" name="playerfour" id="playerfour" placeholder="Joueur 4"
+                                    maxlength="15">
+                            </div>
+                            <div class="input playerFive hidden">
+                                <label for="playerfive">Entrez le pseudo du cinquième joueur</label>
+                                <input type="text" name="playerfive" id="playerfive" placeholder="Joueur 5"
+                                    maxlength="15">
+                            </div>
+                            <div class="input">
+                                <input class="submit" type="submit" value="Prêt !">
+                            </div>
+                    </form>
+                </div>
+        </main>
+            <script src="/js/custom.js"></script>
+        </body>
+

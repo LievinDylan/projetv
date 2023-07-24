@@ -1,23 +1,22 @@
 body { 
     background-image: url("/img/img_home/generator.jpg");
-    color: black;
-}
-
-.background {
-   
-    height: 100%;
-    background-color: rgba(201, 197, 252, 0.3);
-    width: 99%;
-    position: absolute;
-    z-index: -1;
+    background-size: cover;
 }
 
 header {
     background-color: #0f1923;
 }
 
+footer {
+    background-color: #0f1923;
+}
+
+main {
+    height: 100%;
+}
+
 .container {
-    
+    height: 100%;
     width: 60%;
     margin: auto;
     margin-top: 7%;

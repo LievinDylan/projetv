@@ -3,6 +3,7 @@
 </head>
 <%- include ('partials/nav') %>
 <body>
+<div class="container">
     <div class="weapon_container">   
         <h2 class="type">Les armes de poings</h2>   
         <% weapons.forEach(weapon=> { %>             
@@ -135,6 +136,7 @@
             <% } %>
         <% }) %>    
     </div>
+</div>
     <script src="/js/arsenal.js"></script>
 </body>
-</html>
+<%- include('partials/footer') %>

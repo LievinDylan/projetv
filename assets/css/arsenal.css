@@ -1,11 +1,14 @@
 body {
     background-image: url("../img/img_home/bgtwo");
     background-size: cover;
-    margin-top: 4%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
   }
+
+.container {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
 .weapon_container {
     display: flex;
