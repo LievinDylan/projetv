@@ -1,27 +1,37 @@
 <%- include('partials/header') %>
-    <link rel="stylesheet" href="/css/generator.css">
+    <link rel="stylesheet" href="/css/custom.css">
     </head>
     <%- include ('partials/nav') %>
 <body>
-    <h1>Bienvenue sur le générateur pour les parties personnalisées</h1>
-        <h2>Pour une équipe :</h2>
-<form>
-
+    <div class="background">
+    <div class="container">
+    <h2>Bienvenue sur le générateur pour les parties personnalisées</h2>
+    <h4>Rentrez les pseudos de chaque joueur et lancez-vous pour une génération d'équipe aléatoire !</h4>
+<form method="POST" action="/generator/custom">
+    <div class="input">
     <label for="playerone">Entrez le pseudo du premier joueur</label>
     <input type="text" name="playerone" id="playerone" placeholder="Joueur 1">
-
+    </div>
+    <div class="input">
     <label for="playertwo">Entrez le pseudo du second joueur</label>
     <input type="text" name="playertwo" id="playertwo" placeholder="Joueur 2">
-
+    </div>    
+    <div class="input">
     <label for="playerthree">Entrez le pseudo du troisième joueur</label>
     <input type="text" name="playerthree" id="playerthree" placeholder="Joueur 3">
-
+    </div>
+    <div class="input">    
     <label for="playerfour">Entrez le pseudo du quatrième joueur</label>
     <input type="text" name="playerfour" id="playerfour" placeholder="Joueur 4">
-
+    </div>
+    <div class="input">   
     <label for="playerfive">Entrez le pseudo du cinquième joueur</label>
     <input type="text" name="playerfive" id="playerfove" placeholder="Joueur 5">
-
-    <input type="submit" value="C'est parti !">
+     </div>
+     <div class="input">   
+    <input class="submit" type="submit" value="Prêt !">
+     </div>   
 </form>
+</div>
+</div>
 </body>

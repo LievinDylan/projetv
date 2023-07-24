@@ -93,6 +93,7 @@ h1 {
     right: 0;
     padding: 1rem;
     background-color: rgb(15, 25, 35);
+    cursor: crosshair;
 }
 
 .link-perso:hover {

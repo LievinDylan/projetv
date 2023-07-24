@@ -19,6 +19,8 @@ router.get("/generator/valorant", generatorController.renderValorant);
 router.get("/generator/personalisation", generatorController.renderPersonalisation);
 router.get("/arsenal", arsenalController.renderArsenal);
 router.get("/generator/custom", customController.renderCustomPage);
+router.get("/generator/oneteam", customController.renderCustomOneTeamPage);
 router.post("/generator/custom", customController.renderCustomOneTeam);
+
 
 module.exports = router;

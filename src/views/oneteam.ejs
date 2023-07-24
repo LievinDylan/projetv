@@ -7,7 +7,11 @@
             <h1 class="perso-title">Voici votre équipe :</h1>
             <div class="perso">
                 <div class="player">
-                    <h3><%= playerone %></h3>
+                    <% if (!pOne) { %>
+                     <h3>Joueur 1 :</h3>
+                    <% } else { %>
+                        <h3><%= pOne %></h3>
+                        <% } %>
                     <% for( let index=0; index < agents.length; index++ ) { %>
                         <% if (index===i) { %>
                             <img class="icon" src="/img/icon_agent/<%= agents[i].name %>.png"
@@ -19,7 +23,11 @@
                 <% }} %>
 
                 <div class="player">
-                    <h3>Joueur 2 :</h3>
+                    <% if (!pTwo) { %>
+                        <h3>Joueur 2 :</h3>
+                       <% } else { %>
+                           <h3><%= pTwo %></h3>
+                           <% } %>
                     <% for( let index=0; index < agents.length; index++ ) { %>
                         <% if (index===j) { %>
                             <img class="icon" src="/img/icon_agent/<%= agents[j].name %>.png"
@@ -31,7 +39,11 @@
                 <% }} %>
 
                 <div class="player">
-                    <h3>Joueur 3 :</h3>
+                    <% if (!pThree) { %>
+                        <h3>Joueur 3 :</h3>
+                       <% } else { %>
+                           <h3><%= pThree %></h3>
+                           <% } %>
                     <% for( let index=0; index < agents.length; index++ ) { %>
                         <% if (index===k) { %>
                             <img class="icon" src="/img/icon_agent/<%= agents[k].name %>.png"
@@ -43,7 +55,11 @@
                 <% }} %>
 
                 <div class="player">
-                    <h3>Joueur 4 :</h3>
+                    <% if (!pFour) { %>
+                        <h3>Joueur 4 :</h3>
+                       <% } else { %>
+                           <h3><%= pFour %></h3>
+                           <% } %>
                     <% for( let index=0; index < agents.length; index++ ) { %>
                         <% if (index===l) { %>
                             <img class="icon" src="/img/icon_agent/<%= agents[l].name %>.png"
@@ -55,7 +71,11 @@
                 <% }} %>
 
                 <div class="player">
-                    <h3>Joueur 5 :</h3>
+                    <% if (!pFive) { %>
+                        <h3>Joueur 5 :</h3>
+                       <% } else { %>
+                           <h3><%= pFive %></h3>
+                           <% } %>
                     <% for( let index=0; index < agents.length; index++ ) { %>
                         <% if (index===i) { %>
                             <img class="icon" src="/img/icon_agent/<%= agents[m].name %>.png"
