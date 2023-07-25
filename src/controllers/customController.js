@@ -44,6 +44,7 @@ const customController = {
         req.session.playerfour = req.body.playerfour;
         req.session.playerfive = req.body.playerfive;
         req.session.players = req.body.players
+        
         res.redirect("/generator/oneteam");
     },
 

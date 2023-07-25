@@ -4,8 +4,8 @@ dotenv.config();
 
 // Importer les dependances
 const express = require("express");
-const router = require("./router");
-const session = require('express-session');
+const router = require("./src/routers/router");
+const middlewareSession = require("./src/middlewares.js/middlewareSession");
 
 // Création de l'application express
 const app = express();
@@ -20,14 +20,8 @@ app.use(express.static("assets")); // Ca revient à déclarer une route par fich
 // Notre body parser pour les requêtes POST
 app.use(express.urlencoded({ extended: true }));
 
-// On ouvre une session
-app.use(
-  session({
-      saveUninitialized: true,
-      resave: false,
-      secret: 'Unezakzdlaopzadzoezaeazd',
-  })
-);
+// On appel le middleware d'express-session
+app.use(middlewareSession)
 
 // On plug le router
 app.use(router);

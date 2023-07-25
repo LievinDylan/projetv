@@ -41,6 +41,8 @@ header>h1 {
     color: white;
 }
 
+/* NAV */
+
 ul {
     display: flex;
     gap: 1rem;
@@ -66,6 +68,8 @@ a {
 .nav:hover {
     font-size: 20px;
 }
+
+/* PAGE HOME */
 
 .home {
     transition: font-size 0.5s;

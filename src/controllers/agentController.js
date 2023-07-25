@@ -15,7 +15,9 @@ const agentController = {
         const agent = await Agent.findByPk(id, {
             include: ["role","skills"]
         });
-        console.log(agent);
+        if(!agent) {
+            return res.status(404).render('404', { error : `L'agent n°${id} n'existe pas !`})
+        }
         res.render("agent", {agent});
     }
 }
