@@ -7,7 +7,7 @@
         <% agents.forEach(agent=> { %>
             <div class="agent_card" onclick="toggleCard(this)">
                 <!-- Face avant de la carte -->
-                <img src="/img/icon_agent/<%= agent.name %>.png" alt="<%= agent.name %>">
+                <img src="/img/icon_agent/<%= agent.id %>.png" alt="<%= agent.name %>">
                 <% if (agent.name === "Kayo") { %>
                  <h2 class="agent_name">KAY/O</h2>
                 <% } else { %>

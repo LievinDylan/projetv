@@ -16,7 +16,7 @@
         <% const playerIndex = 'playerIndex' + currentPlayer; %>
         <% if (req.session[playerIndex] >= 0 && req.session[playerIndex] < agents.length) { %>
             <% const agentIndex = req.session[playerIndex]; %>
-          <img class="icon" src="/img/icon_agent/<%= agents[agentIndex].name %>.png"
+          <img class="icon" src="/img/icon_agent/<%= agents[agentIndex].id %>.png"
             alt="icone de <%= agents[agentIndex].name %>">
           <h3><%= agents[agentIndex].name %></h3>
         <% } %>
