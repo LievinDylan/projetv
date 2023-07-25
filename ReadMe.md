@@ -11,7 +11,7 @@ J'ai voulu créer un générateur d'agents / armes aléatoire, avec la mise en p
 ## Indications
 
 - Installer la BDD postgres SQL
-    - Si vous faites un role `valorant` avec une database `valorant` et un mot de passe 'valorant' vous aurez accès au `npm run db:reset`.
+    - Si vous faites un role `valorant` avec une database `valorant` et un mot de passe `valorant` vous aurez accès au `npm run db:reset` pour mettre en place la BDD actuelle.
 
 - N'oubliez pas de `npm init` votre repo en premier lieu.
 
