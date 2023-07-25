@@ -2,7 +2,7 @@ const { Agent } = require('../models');
 
 const agentController = {
     //Render la page de tous les agents
-    async renderAllAgents(req, res) {
+    async getAllAgents(req, res) {
     const agents = await Agent.findAll({
         include: "role",
         order: [["name","ASC"]]
@@ -10,7 +10,7 @@ const agentController = {
     res.render("agents", {agents})
     },
     // Render la page d'un agent selon l'id
-    async renderAgent(req, res) {
+    async getOneAgent(req, res) {
         const id = req.params.id;
         const agent = await Agent.findByPk(id, {
             include: ["role","skills"]

@@ -21,7 +21,7 @@ body {
     background-color: rgb(98,26,50);
     color: white;
     border-radius: 16px;
-    cursor: pointer; 
+    cursor: crosshair; 
     transition: transform 0.1s;
   }
 

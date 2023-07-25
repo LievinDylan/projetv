@@ -22,7 +22,7 @@ const generatorController = {
         res.render("generator")
     },
     // Render de la page du générateur en facile
-    async renderEasy(req, res) {
+    async getEasyLevel(req, res) {
         const i = generatorController.generatorAgent();
 
         const agent = await Agent.findByPk(i, {
@@ -32,7 +32,7 @@ const generatorController = {
         res.render("easy", { agent });
     },
     // Render de la page du générateur en intermédiaire
-    async renderMedium(req, res) {
+    async getMediumLevel(req, res) {
         const i = generatorController.generatorAgent();
         const j = generatorController.generatorZeroOrOne();
         const k = generatorController.generatorZeroOrOne();
@@ -50,7 +50,7 @@ const generatorController = {
         res.render("medium", { agent, i, j, k, l, m, n, o})
     },
     // Render de la page du générateur en difficile
-    async renderHard(req, res) {
+    async getHardLevel(req, res) {
         const i = generatorController.generatorAgent();
         const k = generatorController.generatorWeapon();
         let l = generatorController.generatorWeapon();
@@ -72,7 +72,7 @@ const generatorController = {
         res.render("hard", { agent, k, l, m, n })
     },
     // Render de la page du générateur en niveau très difficile
-    async renderValorant(req, res) {
+    async getValorantLevel(req, res) {
         const i = generatorController.generatorAgent();
         const j = generatorController.generatorWeapon();
         const k = Math.floor(Math.random() * 4);

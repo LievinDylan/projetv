@@ -7,7 +7,7 @@ const customController = {
         res.render("custom");
     },
     // Render de la page pour 5 joueurs ou moins
-    async renderCustomOneTeamPage(req, res) {
+    async getPlayersCustom(req, res) {
       const numberOfAgents = 22;
       const numberOfPlayers = req.session.players || 1;
       // Team 1
@@ -37,7 +37,7 @@ const customController = {
           req })
     },
     // Render du POST de la page 'custom' afin de récuperer les inputs du body ainsi que le nombre de joueurs séléctionné 
-    renderCustomOneTeam(req, res) {
+    getNbAndNameOfPlayers(req, res) {
         req.session.playerone = req.body.playerone;
         req.session.playertwo = req.body.playertwo;
         req.session.playerthree = req.body.playerthree;
