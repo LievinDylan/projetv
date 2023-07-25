@@ -1,13 +1,15 @@
 body {
     background-image: url("/img/img_home/bgtwo.png");
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .agent_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10%;
+    /* On préfère une valeur en rem pour un meilleur comportement responsive */
+    padding-top: 2rem;
     gap: 5rem;
   }
   

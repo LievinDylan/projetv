@@ -2,23 +2,29 @@
 
 
 .homepage {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../img/img_home/home.jpg");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-
+/* On préfère un comportement flex sur le main de manière à avoir un comportement des marges plus responsive */
+.homepage main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .paraph-homepage {
     text-align: center;
-    position: absolute;
-    width: 35%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 800px;
+    min-width: 300px;
     padding: 1rem;
+    margin: 0 2rem;
     background-color: rgb(98,26,50, 0.9);
     color: white;
     border: 2px solid black;
@@ -42,12 +48,12 @@
 
 .know-more {
     padding: 1rem;
-    transition: font-size 0.5s;
+    transition: transform 0.5s;
     cursor: crosshair;
 }
 
 .know-more:hover {
-    font-size: 18px;
+    transform: scale(1.1);
     font-weight: bold;
 }
 
@@ -68,4 +74,19 @@ h2 {
 .close {
     color: rgb(98,26,50);
     background-color: white;
+    cursor: pointer;
   }
+
+/* (UX design) Comportement un peu plus intuitif pour le bouton */
+.close:hover {
+    background-color: crimson;
+    color: white;
+}
+
+.paraph-info ul {
+    flex-wrap: wrap;
+}
+
+.paraph-info ul li {
+    text-align: start;
+}
