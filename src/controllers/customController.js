@@ -8,7 +8,7 @@ const customController = {
     },
     // Render de la page pour 5 joueurs ou moins
     async getPlayersCustom(req, res) {
-      const numberOfAgents = 22;
+      const numberOfAgents = await Agent.count();
       const numberOfPlayers = req.session.players || 1;
       // Team 1
       const selectedAgents = [];

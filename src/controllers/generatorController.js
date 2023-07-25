@@ -3,8 +3,8 @@ const { Weapon } = require('../models');
 
 const generatorController = {
     // Méthode pour générateur d'agent aléatoire selon l'ID
-    generatorAgent() {
-        const i = Math.floor(Math.random() * 22) + 1;
+    async generatorAgent(max) {
+        const i = Math.floor(Math.random() * max) + 1;
         return i;
     },
     // Méthode pour générer une arme aléatoire selon son index dans le tableau de l'agent
@@ -23,7 +23,8 @@ const generatorController = {
     },
     // Render de la page du générateur en facile
     async getEasyLevel(req, res) {
-        const i = generatorController.generatorAgent();
+        const maxOfAgents = await Agent.count();
+        const i = await generatorController.generatorAgent(maxOfAgents);
 
         const agent = await Agent.findByPk(i, {
             include: ["role"]
@@ -33,7 +34,8 @@ const generatorController = {
     },
     // Render de la page du générateur en intermédiaire
     async getMediumLevel(req, res) {
-        const i = generatorController.generatorAgent();
+        const maxOfAgents = await Agent.count();
+        const i = await generatorController.generatorAgent(maxOfAgents);
         const j = generatorController.generatorZeroOrOne();
         const k = generatorController.generatorZeroOrOne();
         const l = generatorController.generatorZeroOrOne();
@@ -51,7 +53,8 @@ const generatorController = {
     },
     // Render de la page du générateur en difficile
     async getHardLevel(req, res) {
-        const i = generatorController.generatorAgent();
+        const maxOfAgents = await Agent.count();
+        const i = await generatorController.generatorAgent(maxOfAgents);
         const k = generatorController.generatorWeapon();
         let l = generatorController.generatorWeapon();
         while (l === k) {
@@ -73,7 +76,8 @@ const generatorController = {
     },
     // Render de la page du générateur en niveau très difficile
     async getValorantLevel(req, res) {
-        const i = generatorController.generatorAgent();
+        const maxOfAgents = await Agent.count();
+        const i = await generatorController.generatorAgent(maxOfAgents);
         const j = generatorController.generatorWeapon();
         const k = Math.floor(Math.random() * 4);
         const agent = await Agent.findByPk(i, {

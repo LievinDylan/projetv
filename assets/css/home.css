@@ -77,7 +77,7 @@ h2 {
     cursor: pointer;
   }
 
-/* (UX design) Comportement un peu plus intuitif pour le bouton */
+
 .close:hover {
     background-color: crimson;
     color: white;

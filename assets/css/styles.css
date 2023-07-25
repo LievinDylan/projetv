@@ -8,7 +8,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* On préfère une position sticky sinon les boxs se comportent mal au resize */
     position: sticky;
     z-index: 100;
     top: 0%;
@@ -29,8 +28,6 @@ footer {
     color: white;
     border-bottom: 1px solid black;
     height: 50px;
-    /* width: 99%; Ca ne sert à rien de mettre une width ici, sinon la box du footer va overflow légèrement. */
-    /* bottom: 0; Pourquoi un bottom alors que le footer ne prend pas de propriété position ? */
     padding: 0.5rem;
     font-size: 10px;
 }
