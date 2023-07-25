@@ -1,11 +1,13 @@
 body {
     background-image: url("../img/img_home/bgtwo.png");
-    background-size: cover;
+    /* background-size: cover; Cette propriété va faire zoomer le bg au resize. C'est peut-être mieux visuellement (UI) de laisser le comportement par défaut (repeat) s'occuper de ça. */
+    overflow-x: hidden;
   }
 
 .container {
-  margin-top: 4%;
+  padding: 0 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
@@ -15,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 5%;
+    padding-top: 5rem;
     gap: 2rem;
   }
   
