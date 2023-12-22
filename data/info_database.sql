@@ -29,7 +29,8 @@ INSERT INTO "agent" ("id", "name", "description", "quote", "role_id") VALUES
 (19, 'Fade', 'Originaire de Turquie, la chasseuse de primes Fade utilise le pouvoir des cauchemars pour s''emparer des secrets ennemis. Elle traque ses cibles et révèle leurs plus grandes peurs pour mieux les briser dans l''obscurité.', 'Nightmare, take them !', 2),
 (20, 'Harbor', 'Venu de la côte indienne, Harbor déferle sur le terrain grâce à une technologie antique qui lui permet de contrôler l''eau. Il déchaîne des torrents bouillonnants et de terribles lames d''eau pour protéger ses alliés et noyer ses adversaires.', 'I suggest you move !', 3),
 (21, 'Gekko', 'Originaire de Los Angeles, Gekko dirige une bande de créatures chaotiques, mais très soudées. Ses amis s''occupent de disperser les ennemis, puis Gekko rassemble sa petite troupe pour recommencer.', 'Oye ! Monster on the loose !', 2),
-(22, 'Deadlock', 'Deadlock, l''agent spécial norvégien, déploie un éventail de nanocâbles ultra-modernes pour défendre sa position contre le plus violent des assauts. Nul n''échappe à sa vigilance, ni ne survit à sa cruelle ténacité.', 'My territory, my rules !', 4);
+(22, 'Deadlock', 'Deadlock, l''agent spécial norvégien, déploie un éventail de nanocâbles ultra-modernes pour défendre sa position contre le plus violent des assauts. Nul n''échappe à sa vigilance, ni ne survit à sa cruelle ténacité.', 'My territory, my rules !', 4),
+(23, 'Iso', 'Venu de Chine et spécialiste de missions délicates, Iso se fond dans le flux de Radianite pour démanteler les réseaux ennemis. Capable de restructurer l''énergie ambiante en protection anti-balles, il ne dévie pas de la route vers son prochain duel à mort.', 'It''s you and me',1);
 
 
 INSERT INTO "skill" ("id", "name", "agent_id", "description") VALUES
@@ -113,16 +114,18 @@ INSERT INTO "skill" ("id", "name", "agent_id", "description") VALUES
 (78, 'Dôme aqueux', 20, 'Harbor lance un bouclier d''eau sphérique qui se déploie au contact du sol'),
 (79, 'Cascade', 20, 'Harbor déploie un petit mur d''eau face à lui'),
 (80, 'Geysers diluviens', 20, 'Harbor invoque une flaque bouillonnante sur le sol qui provoque l''apparition de geysers successifs sous les ennemis présents dans la flaque. Si l''agent est touché par le geyser, il est désorienté'),
-(81, 'Altego', 21, 'Gekko envoie Altego, qui peut désorienter un ennemi qu''il croise. Aussi, Altego peut poser ou désarmocer le spike'),
-(82, 'Verti', 21, 'Gekko envoie Verti dans les airs, qui tire des projectiles aveuglants sur les ennemis dans son champ de vision'),
-(83, 'Pogo', 21, 'Gekko envoie Pogo qui s''étale sur une grande zone circulaire au sol et explose après un court délai'),
-(84, 'Mordicus', 21, 'Gekko envoie Mordicus, qu''il contrôle, afin de bondir sur les ennemis et les neutraliser dans un petit rayon'),
+(81, 'Altego', 21, 'Gekko envoi Altego, qui peut désorienter un ennemi qu''il croise. Aussi, Altego peut poser ou désarmocer le spike'),
+(82, 'Verti', 21, 'Gekko envoi Verti dans les airs, qui tire des projectiles aveuglants sur les ennemis dans son champ de vision'),
+(83, 'Pogo', 21, 'Gekko envoi Pogo qui s''étale sur une grande zone circulaire au sol et explose après un court délai'),
+(84, 'Mordicus', 21, 'Gekko envoi Mordicus, qu''il contrôle, afin de bondir sur les ennemis et les neutraliser dans un petit rayon'),
 (85, 'Radar ultrason', 22, 'Deadlock pose un radar à ultrason sur un mur qui detecte et étoudit les agents dans sa zone d''effet'),
 (86, 'Disque barrière', 22, 'Deadlock déploie un disque barrière qui bloque l''avancé des agents'),
 (87, 'Gravnet', 22, 'Deadlock lance une grenade qui explose à l''atterrissage et force tous les ennemis à portée à se baisser ou à se déplacer au ralenti'),
-(88, 'Annihilation', 22, 'Deadlock envoie une salve de nanocâbles qui capturent un ennemi, l''emmaillote et l''attire vers Deadlock. Si ce dernier n''est pas libéré par ses alliés, il meurt lorsqu''il atteind la position initiale de Deadlock');
-
-
+(88, 'Annihilation', 22, 'Deadlock envoie une salve de nanocâbles qui capturent un ennemi, l''emmaillote et l''attire vers Deadlock. Si ce dernier n''est pas libéré par ses alliés, il meurt lorsqu''il atteind la position initiale de Deadlock'),
+(89, 'Sape', 23, 'Iso lance un carreau moléculaire qui rend fragile les agents touchés. Sape traverses les objets solide dont les murs'),
+(90, 'Tir couplé', 23, 'Iso déclenche un décompte de concentration. Pendant ce décompte, chaque ennemi tué génère une orbe, si Iso tire sur cette orbe il obtient un bouclier temporaire absorbant tout types de dégats'),
+(91, 'Contingence', 23, 'Iso envoi un mur prismatique qui avance droit devant lui, ce mur empêche les balles de traversés'),
+(92, 'Duel à huis clos', 23, 'Iso entraine un ennemi présent dans la zone d''effet dans une arène dimensionnelle pour un duel à mort');
 
 INSERT INTO "type" ("id", "name") VALUES
 (1, 'Arme de poing'),
@@ -525,7 +528,24 @@ INSERT INTO "agent_has_weapon" ("agent_id", "weapon_id") VALUES
 (22, 14),
 (22, 15),
 (22, 16),
-(22, 17);
+(22, 17),
+(23, 1),
+(23, 2),
+(23, 3),
+(23, 4),
+(23, 5),
+(23, 6),
+(23, 7),
+(23, 8),
+(23, 9),
+(23, 10),
+(23, 11),
+(23, 12),
+(23, 13),
+(23, 14),
+(23, 15),
+(23, 16),
+(23, 17);
 
 COMMIT;
 
